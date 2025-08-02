@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char *argv[]) {
 	bool creating_files = false;
@@ -8,9 +9,18 @@ int main(int argc, char *argv[]) {
 	if (argc > 2) {
 		creating_files = true;
 	} else {
-		printf("Usage: btouch <.extension> <file1> <file2> ...\n");
-		printf("Note: ommit extension by leaving a space there instead.\n");
-		return 1;
+		if (argc == 2 && !strcmp(argv[1], "-i")) {
+			printf("Installing...\n");
+			system("sudo mv btouch /usr/local/bin");
+			system("sudo chmod +x /usr/local/bin/btouch");
+			printf("Moved btouch to /usr/local/bin\n");
+			printf("Installed! Run with cmd btouch\n");
+		} else {
+			printf("Usage: btouch <.extension> <file1> <file2> ...\n");
+			printf("Note: ommit extension by leaving a space there instead.\n");
+			printf("Note: if not installed, ./btouch -i to install.\n");
+			return 1;
+		}
 	}
 
 	char user_input[256];
@@ -21,9 +31,6 @@ int main(int argc, char *argv[]) {
 			system(user_input);
 		}
 	}
-
-	system("sudo mv btouch /usr/local/bin");
-	system("sudo chmod +x /usr/local/bin/btouch");
 
 	return 0;
 }
