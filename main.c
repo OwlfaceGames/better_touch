@@ -17,7 +17,8 @@ int main(int argc, char *argv[]) {
 			printf("Installed! Run with cmd btouch\n");
 		} else {
 			printf("Usage: btouch <.extension> <file1> <file2> ...\n");
-			printf("Note: ommit extension by leaving a space there instead.\n");
+			printf("OR: btouch <suffix> <file1> <file2> ...\n");
+			printf("Note: ommit extension/suffix by leaving a space there instead.\n");
 			printf("Note: if not installed, ./btouch -i to install.\n");
 			return 1;
 		}
