@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 			printf("OR: btouch <suffix> <file1> <file2> ...\n");
 			printf("Note: ommit extension/suffix by leaving a space there instead.\n");
 			printf("Note: if not installed, ./btouch -i to install.\n");
-			return 1;
+			return 0;
 		}
 	}
 
