@@ -16,7 +16,23 @@ A smarter version of the `touch` command that allows you to create multiple file
 
 ## Installation
 
-### Quick Install
+### One-Line Install (Recommended)
+
+Run this command to automatically download and install the latest version:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/OwlfaceGames/better_touch/main/install.sh | bash
+```
+
+This script will:
+- Auto-detect your OS and architecture
+- Download the appropriate pre-compiled binary
+- Install it to `/usr/local/bin` (with sudo if needed)
+- Fall back to compiling from source if no binary is available
+
+### Manual Installation
+
+If you prefer to install manually:
 
 1. Download the latest release from the [GitHub releases page](../../releases)
 2. Extract the binary
@@ -28,22 +44,12 @@ A smarter version of the `touch` command that allows you to create multiple file
 
 This will automatically install `btouch` to `/usr/local/bin` and make it available system-wide.
 
-### Manual Installation
-
-1. Download the binary from releases
-2. Move it to a directory in your PATH:
-
-```bash
-sudo mv btouch /usr/local/bin/
-sudo chmod +x /usr/local/bin/btouch
-```
-
 ### Building from Source
 
 If you prefer to build from source:
 
 ```bash
-git clone https://github.com/yourusername/better_touch.git
+git clone https://github.com/OwlfaceGames/better_touch.git
 cd better_touch
 gcc -o btouch main.c
 ./btouch -i
