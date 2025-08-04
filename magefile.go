@@ -6,7 +6,6 @@ package main
 import (
 	"fmt"
 	"os"
-	// "runtime"
 	"github.com/magefile/mage/sh"
 )
 
