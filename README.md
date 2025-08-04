@@ -21,7 +21,7 @@ A smarter version of the `touch` command that allows you to create multiple file
 Run this command to automatically download and install the latest version:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/OwlfaceGames/better_touch/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/OwlfaceGames/better_touch/master/install.sh | bash
 ```
 
 This script will:
